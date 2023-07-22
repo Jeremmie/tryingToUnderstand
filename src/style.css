@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  background-color: black;
+  color: white;
+  transition: ease-in-out 500ms;
+}
+
+.dark-mode {
+  background-color: white;
+  color: black;
+  transition: ease-in-out 500ms;
+} */
