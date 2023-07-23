@@ -1,7 +1,7 @@
 import Clicker from "./Clicker"
 import DarkTheme from "./DarkTheme"
 import { useState } from "react"
-
+import LottieAnimation from "./lottieAnimation"
 
 
 export default function App({children}){
@@ -14,8 +14,10 @@ export default function App({children}){
   const increment = () =>{
       setCount(count + 1)
   }
+
   return <>
   <DarkTheme />
+  <LottieAnimation />
   <h1 className="w-fit text-2xl font-bold display: block; mx-auto px-4 py-2 rounded-md" >Mes notes pour React</h1>
   {children}
   <button onClick={toggleClickerClick}>{hasClicker ? 'hide' : 'show'} clicker</button>

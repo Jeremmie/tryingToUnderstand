@@ -16,9 +16,8 @@ export default function DarkTheme(){
         whiteMode(!darkMode)
     }
 
-
-
     return <>
     <button className="rounded-full bg-black px-2 text-sm" onClick={blackTheme}>{darkMode ? 'day' : 'night'}</button>
+
     </>
 }
