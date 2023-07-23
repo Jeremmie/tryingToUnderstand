@@ -1,24 +1,31 @@
-import React from "react";
-import { useRef } from "react";
+import React, { useState, useRef } from "react";
 import Lottie from "lottie-react";
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import './style.css';
 import testAnim from './assets/test_anim_logo.json';
 
-export default function LottieAnimation(){
-    
-    return <> 
-        <div>
-        {/* https://github.com/LottieFiles/lottie-react */}
-        <Player
-            onEvent={click => {
-                if (click === 'play') console.log('play'); // check event type and do something
-              }}
-            src={testAnim}
-            style={{ height: '300px', width: '300px' }}
->
-        <Controls visible={true} buttons={['play', 'frame', 'debug']} />
-        </Player>
-        </div>
-    </>
+export default function LottieAnimation() {
+    const lottieRef = useRef();
+    var animDirection = -1;
+
+    function blackTheme() {
+        var switchDarkMode = document.documentElement;
+        switchDarkMode.classList.toggle('dark');
+    }
+
+    const playAnimationNow = () => {
+        animDirection *= -1;
+        lottieRef.current.setDirection(animDirection);
+        lottieRef.current.play();
+    }
+
+    const handleLottieClick = () => {
+        playAnimationNow();
+        blackTheme();
+    }
+
+    return (
+        <>
+            <Lottie onClick={handleLottieClick} autoplay={false} lottieRef={lottieRef} className="w-28" animationData={testAnim} loop={false} />
+        </>
+    );
 }

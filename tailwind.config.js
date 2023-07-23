@@ -15,11 +15,16 @@ export default {
       '4xl': '2.441rem',
       '5xl': '3.052rem',
     },
+    transitionDuration: {
+      '1200': '1200ms',
+    },
 
     extend: {
       colors: {
         'powder-blue': '#ACC8E5',
         'prussian-blue': '#112A46',
+        'melon': '#FFB8B8',
+        'gunmetal': '#002129',
     },
   },
   plugins: [],
