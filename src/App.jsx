@@ -1,7 +1,7 @@
 import Clicker from "./Clicker"
 import DarkTheme from "./DarkTheme"
 import { useState } from "react"
-import LottieAnimation from "./lottieAnimation"
+import LottieAnimation from "./LottieAnimation"
 
 
 export default function App({children}){
